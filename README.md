@@ -69,7 +69,7 @@ Open `http://localhost:3000/` in your browser.
 
 This is the database model:
 
-![Database model](docs/ERD.jpg).
+![Database model](./docs/ERD.jpeg).
 
 
 ### Deployment
