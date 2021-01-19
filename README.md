@@ -65,6 +65,13 @@ Open `http://localhost:3000/` in your browser.
 
 > Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
 
+### Documentation
+
+This is the database model:
+
+![Database model](docs/ERD.jpg).
+
+
 ### Deployment
 
 TBA
