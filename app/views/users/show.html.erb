@@ -5,5 +5,9 @@
     <ul class="posts">
       <%= render @posts %>
     </ul>
+    <h3> All Friends </h3>
+    <% @friends.each do |friend| %>
+      <%= friend.name %>
+      <%end%>
   </article>
 </section>

@@ -4,12 +4,13 @@ class FriendshipsController < ApplicationController
         @friendship = Friendship.new
     end
     def create
-        @friendship = Friendship.new(friendship_params)
+        @friendship = current_user.friendships.build(friendship_params)
         if @friendship.save
             redirect_to users_path, notice: "Friend requested"
 
         else
-            notice: "Error requesting friend"
+            flash[:notice] "Error requesting friend"
+        end
     end
     end
 end
