@@ -2,5 +2,15 @@
   Name: <%= user.name %>
   <span class="profile-link">
     <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
+    <%= form_for user do |f| %>
+
+        <%= f.fields_for user.friendships.build do |addy_form| %>
+          <div class = "d-none">
+          <%=f.text_field :user, value:current_user.id%>
+          <%=f.text_field :friend, value:user.id%>
+          </div>
+      <% end %>
+      <%= f.submit %>
+    <% end %>
   </span>
 </li>
