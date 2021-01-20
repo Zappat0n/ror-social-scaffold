@@ -4,14 +4,13 @@ RSpec.feature "CreatePosts", type: :feature do
   before :each do
     @user = User.create(name: 'Peter', email: 'x@x.com', password: '123456')
     @post = Post.new(user: @user, content: 'Hello!')
-    visit '/index'
+    visit root
   end
 
-  it 'user can login and it is redirected' do
+  it 'user can create a post' do
     fill_in post_content,	with: @post.content
-    fill_in 'Password',	with: @user.password
-    click_button 'LOG IN'
+    click_button 'SAVE'
     expect(current_path).to eq(root)
-    expect(page).to have_text('Signed in successfully.')
+    expect(page).to have_text('Post was successfully created.')
   end
 end
