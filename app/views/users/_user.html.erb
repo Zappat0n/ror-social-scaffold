@@ -2,15 +2,9 @@
   Name: <%= user.name %>
   <span class="profile-link">
     <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
-    <%= form_for user do |f| %>
-
-        <%= f.fields_for user.friendships.build do |addy_form| %>
-          <div class = "d-none">
-         
-          <%=f.text_field :friend, value:user.id%>
-          </div>
-      <% end %>
-      <%= f.submit %>
+    <%= form_for(user.friendships.new, url: user_friendships_path(friendship)) do |form| %>
+      <%= form.text_field :friend, id: :friend_id, class: 'form-control d-none', value: user.id %>
+      <%= form.submit 'Friend', class: 'btn btn-secondary' %>
     <% end %>
   </span>
 </li>
