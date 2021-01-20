@@ -14,5 +14,12 @@
     <% @pending_friends.each do |friend| %>
       <%= friend.name %>
     <%end%>
+
+    <h3> Friend requests: </h3>
+    <% @friend_requests.each do |friend| %>
+      <%= friend.name %>
+      <%= accept_friendship_btn(friend)%>
+    <%end%>
+
   </article>
 </section>
