@@ -2,8 +2,8 @@
   Name: <%= user.name %>
   <span class="profile-link">
     <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
-    <%= form_for(user.friendships.new, url: user_friendships_path(friendship)) do |form| %>
-      <%= form.text_field :friend, id: :friend_id, class: 'form-control d-none', value: user.id %>
+    <%= form_for(user.friendships.new, url: user_friendships_path(user)) do |form| %>
+      <%= form.text_field :friend_id, id: :user_id, class: 'form-control', value: user.id %>
       <%= form.submit 'Friend', class: 'btn btn-secondary' %>
     <% end %>
   </span>

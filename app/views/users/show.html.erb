@@ -5,9 +5,14 @@
     <ul class="posts">
       <%= render @posts %>
     </ul>
-    <h3> All Friends </h3>
+    <h3> All friends: </h3>
     <% @friends.each do |friend| %>
       <%= friend.name %>
-      <%end%>
+    <%end%>
+
+    <h3> Pending requests: </h3>
+    <% @pending_friends.each do |friend| %>
+      <%= friend.name %>
+    <%end%>
   </article>
 </section>

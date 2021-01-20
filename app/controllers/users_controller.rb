@@ -9,5 +9,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @posts = @user.posts.ordered_by_most_recent
     @friends = @user.friends
+    @pending_friends = @user.pending_friends
   end
 end
