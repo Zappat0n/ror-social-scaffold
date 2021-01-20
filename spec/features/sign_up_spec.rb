@@ -6,13 +6,13 @@ RSpec.feature "SignUps", type: :feature do
     visit new_user_registration_path
   end
 
-  it 'user can sign up and it is redirected' do
+  it 'user can Sign up and it is redirected' do
     fill_in 'Name',	with: @user.name
     fill_in 'Email',	with: @user.email
     fill_in 'Password',	with: @user.password
     fill_in 'Password confirmation',	with: @user.password
-    click_button 'SIGN UP'
-    expect(current_path).to eq(root)
+    click_button 'Sign up'
+    expect(current_path).to eq(root_path)
     expect(page).to have_text('Welcome! You have signed up successfully.')
   end
 
@@ -20,7 +20,7 @@ RSpec.feature "SignUps", type: :feature do
     fill_in 'Email',	with: @user.email
     fill_in 'Password',	with: @user.password
     fill_in 'Password confirmation',	with: @user.password
-    click_button 'SIGN UP'
+    click_button 'Sign up'
     expect(page).to have_text("Name can't be blank")
   end
 
@@ -28,7 +28,7 @@ RSpec.feature "SignUps", type: :feature do
     fill_in 'Name',	with: @user.name
     fill_in 'Password',	with: @user.password
     fill_in 'Password confirmation',	with: @user.password
-    click_button 'SIGN UP'
+    click_button 'Sign up'
     expect(page).to have_text("Email can't be blank")
   end
 
@@ -36,7 +36,7 @@ RSpec.feature "SignUps", type: :feature do
     fill_in 'Name',	with: @user.name
     fill_in 'Email',	with: @user.email
     fill_in 'Password confirmation',	with: @user.password
-    click_button 'SIGN UP'
+    click_button 'Sign up'
     expect(page).to have_text("Password can't be blank")
   end
 
@@ -45,7 +45,7 @@ RSpec.feature "SignUps", type: :feature do
     fill_in 'Email',	with: @user.email
     fill_in 'Password',	with: @user.password
     fill_in 'Password confirmation',	with: ' '
-    click_button 'SIGN UP'
+    click_button 'Sign up'
     expect(page).to have_text("Password confirmation doesn't match Password")
   end
 
@@ -56,7 +56,7 @@ RSpec.feature "SignUps", type: :feature do
     fill_in 'Email',	with: @user.email
     fill_in 'Password',	with: @user.password
     fill_in 'Password confirmation',	with: @user.password
-    click_button 'SIGN UP'
-    expect(page).to have_no_text('Email has already been taken')
+    click_button 'Sign up'
+    expect(page).to have_text('Email has already been taken')
   end
 end
