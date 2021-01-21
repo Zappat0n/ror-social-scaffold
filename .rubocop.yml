@@ -25,6 +25,7 @@ Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
   ExcludedMethods: ["describe"]
+  Exclude: ["spec/**/*"]
   Max: 30
 
 Style/Documentation:
@@ -57,3 +58,7 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
+Style/Tab:
+  Enabled: false
+Layout/Tab:
+  EnforcedStyle: tab
