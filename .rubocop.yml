@@ -58,3 +58,7 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
+Style/Tab:
+  Enabled: false
+Layout/Tab:
+  EnforcedStyle: tab
