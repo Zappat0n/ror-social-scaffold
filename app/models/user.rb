@@ -29,4 +29,8 @@ class User < ApplicationRecord
   def friend?(user)
     friends.include?(user)
   end
+
+  def friend_or_pending?(user)
+    friends.include?(user) || pending_friends.include?(user)
+  end
 end
