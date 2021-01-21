@@ -18,11 +18,11 @@ module ApplicationHelper
 
   def accept_friendship_btn(friend)
     friendship = Friendship.find_by(user_id: friend.id, friend_id: current_user.id)
-    link_to 'Accept', friendship_path(friendship), method: :put if friendship
+    link_to 'Accept', friendship_path(friendship), method: :put, user_id: friend.id, friend_id: current_user.id if friendship
   end
 
   def reject_friendship_btn(friend)
     friendship = Friendship.find_by(user_id: friend.id, friend_id: current_user.id)
-    link_to 'Reject', friendship_path(friendship), method: :delete
+    link_to 'Reject', friendship_path(friendship), method: :delete, user_id: friend.id, friend_id: current_user.id if friendship
   end
 end
