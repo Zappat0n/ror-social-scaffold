@@ -8,7 +8,7 @@
   <%= form_for(user.friendships.new, url: friendship_path(user)) do |form| %>
     <%= form.text_field :user_id, id: :user_id, class: 'form-control d-none', value: current_user.id %>
     <%= form.text_field :friend_id, id: :user_id, class: 'form-control d-none', value: user.id %>
-    <%= form.submit 'nvite Friend' %>
+    <%= form.submit 'Invite Friend' %>
     <%end%>
   <% end %>
 </li>
