@@ -23,6 +23,6 @@ module ApplicationHelper
 
   def reject_friendship_btn(friend)
     friendship = Friendship.find_by(user_id: friend.id, friend_id: current_user.id)
-    link_to 'Reject', friendship_path(friendship), method: :delete
+    link_to 'Reject', friendship_path(friendship), method: :delete if friendship
   end
 end
