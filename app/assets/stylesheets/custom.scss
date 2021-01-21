@@ -35,6 +35,15 @@ a {
   color: $primary-color-text;
 }
 
+.accept_reject_friendship {
+  a {
+    color: $primary-color-dark;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin: 0 4px;
+  }
+}
+
 .nav {
   display: flex;
   justify-content: space-between;

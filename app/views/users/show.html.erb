@@ -36,11 +36,11 @@
       <h3> Friend requests: </h3>
       <ul>
         <% @friend_requests.each do |friend| %>
-          <li>
+          <li class = "accept_reject_friendship">
           <%= friend.name %>
           <%= accept_friendship_btn(friend)%>
           <%= reject_friendship_btn(friend)%>
-          
+
           </li>
         <%end%>
       </ul>
