@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "CreateComments", type: :feature do
+RSpec.feature 'CreateComments', type: :feature do
   before :each do
     @user = User.create(name: 'Peter', email: 'x@x.com', password: '123456')
     sign_in @user

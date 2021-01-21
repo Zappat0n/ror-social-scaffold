@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "CreateLikes", type: :feature do
+RSpec.feature 'CreateLikes', type: :feature do
   before :each do
     @user = User.create(name: 'Peter', email: 'x@x.com', password: '123456')
     sign_in @user
@@ -20,5 +20,4 @@ RSpec.feature "CreateLikes", type: :feature do
     expect(current_path).to eq(posts_path)
     expect(page).to have_text('You disliked a post.')
   end
-
 end

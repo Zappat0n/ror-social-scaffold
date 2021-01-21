@@ -14,12 +14,12 @@ RSpec.describe Friendship, type: :model do
   end
 
   it 'can create a friendship through user' do
-    newFriendship = user.friendships.build(friend: friend)
-    expect(newFriendship.valid?).to be true
+    new_friendship = user.friendships.build(friend: friend)
+    expect(new_friendship.valid?).to be true
   end
 
-#  it 'if one user is friend of another user, that user is also friend of the first' do
-#    friendship.update(status: true)
-#    expect(friend.friendships.exists?(user.id)).to be true
-#  end
+  #  it 'if one user is friend of another user, that user is also friend of the first' do
+  #    friendship.update(status: true)
+  #    expect(friend.friendships.exists?(user.id)).to be true
+  #  end
 end
