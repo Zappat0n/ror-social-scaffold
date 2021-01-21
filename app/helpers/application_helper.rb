@@ -19,7 +19,7 @@ module ApplicationHelper
   def accept_friendship_btn(friend)
     friendship = Friendship.find_by(user_id: friend.id, friend_id: current_user.id)
     if friendship
-      link_to('Accept', user_friendship_path(id: friendship.id, user_id: friendship.user_id, status: true), method: :post)
+      link_to 'Accept', friendship_path(friendship), method: :put
     end
   end
 end

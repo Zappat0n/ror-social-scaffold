@@ -12,4 +12,15 @@ class FriendshipsController < ApplicationController
             redirect_to users_path, notice: @friendship.errors.full_messages
         end
     end
+
+    def update
+        @friendship = Friendship.find(params[:id])
+        @friendship.status = !@friendship.status
+        if @friendship.save
+            redirect_to current_user, notice: "Invitation accepted"
+        else
+            redirect_to current_user, notice: "Error accepting invitation"
+        end
+    end
+
 end
