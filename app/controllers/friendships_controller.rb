@@ -22,4 +22,13 @@ class FriendshipsController < ApplicationController
       redirect_to current_user, notice: 'Error accepting invitation'
     end
   end
+
+  def destroy
+    @friendship = Friendship.find(params[:id])
+    if @friendship.destroy
+      redirect_to current_user, notice: 'Invitation rejected'
+    else
+      redirect_to current_user, notice: 'Error accepting rejecting'
+    end
+  end
 end

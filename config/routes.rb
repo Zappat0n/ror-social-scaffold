@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   post '/friendships/:id', to: 'friendships#create'
   put '/friendships/:id', to: 'friendships#update'
+  delete '/friendships/:id', to: 'friendships#destroy'
 
   resources :users, only: [:index, :show]
 
