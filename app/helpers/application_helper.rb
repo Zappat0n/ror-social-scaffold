@@ -16,13 +16,17 @@ module ApplicationHelper
     end
   end
 
+  # rubocop:disable Layout/LineLength
+
   def accept_friendship_btn(friend)
     friendship = Friendship.find_by(user_id: friend.id, friend_id: current_user.id)
-    link_to 'Accept', friendship_path(friendship), method: :put if friendship
+    link_to 'Accept', friendship_path(friend_id: friendship.friend_id, user_id: friendship.user_id), method: :put if friendship
   end
 
   def reject_friendship_btn(friend)
     friendship = Friendship.find_by(user_id: friend.id, friend_id: current_user.id)
-    link_to 'Reject', friendship_path(friendship), method: :delete if friendship
+    link_to 'Reject', friendship_path(friend_id: friendship.friend_id, user_id: friendship.user_id), method: :delete if friendship
   end
 end
+
+# rubocop:enable Layout/LineLength
