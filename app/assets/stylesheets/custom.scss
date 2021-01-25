@@ -35,6 +35,15 @@ a {
   color: $primary-color-text;
 }
 
+.accept_reject_friendship {
+  a {
+    color: $primary-color-dark;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin: 0 4px;
+  }
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -157,7 +166,7 @@ form {
     }
 
     input[type="checkbox"] {
-      width: fit-content;
+      display: table;
     }
   }
 
@@ -320,6 +329,10 @@ form {
   ul {
     color: #f00;
   }
+}
+
+.d-none {
+  display: none;
 }
 
 @media only screen and (min-width: 480px) {
