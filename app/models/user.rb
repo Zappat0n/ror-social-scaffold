@@ -30,7 +30,7 @@ class User < ApplicationRecord
     friends.include?(user)
   end
 
-  def pending_friends_or_friends(user)
+  def pending_friends_or_friends?(user)
     friends.include?(user) || pending_friends.include?(user)
   end
 end
