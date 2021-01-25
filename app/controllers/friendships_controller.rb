@@ -5,7 +5,8 @@ class FriendshipsController < ApplicationController
   end
 
   def create
-    @friendship = current_user.friendships.build(friendship_params)
+    @friendship = current_user.pending_friendships.build(user_id: params[:user][:user_id],
+                                                         friend_id: params[:user][:friend_id])
     if @friendship.save
       redirect_to users_path, notice: 'Friend requested'
     else
@@ -16,12 +17,8 @@ class FriendshipsController < ApplicationController
   def update
     @friendship = Friendship.find([params[:user_id], params[:friend_id]])
 
-    @friendship.status = !@friendship.status
-    if @friendship.save
-      redirect_to current_user, notice: 'Invitation accepted'
-    else
-      redirect_to current_user, notice: 'Error accepting invitation'
-    end
+    @friendship.confirm_friend
+    redirect_to current_user, notice: 'Invitation accepted'
   end
 
   def destroy
