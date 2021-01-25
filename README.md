@@ -73,10 +73,12 @@ This is the database model:
 ![Database model](./docs/ERD.jpeg)
 
 To use the application you need to create an user.
+
 After that you will be redirected to the timeline where you will be able to see all your posts and posts from your friends.
 Here you can comment or like any post.
 
 You can go to the all users page too, where you will see all the users of the application.
+
 Here you can send friend requests and accept or reject friendship requests from other users.
 
 ![Screenshot](./app/assets/images/screenshot.png)
