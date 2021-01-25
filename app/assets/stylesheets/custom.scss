@@ -325,6 +325,15 @@ form {
 .d-none {
   display: none;
 }
+.accept_reject_friendship {
+  a {
+    color: $primary-color-dark;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin: 0 4px;
+  }
+}
+
 
 @media only screen and (min-width: 480px) {
   form {
