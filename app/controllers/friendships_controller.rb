@@ -14,7 +14,8 @@ class FriendshipsController < ApplicationController
   end
 
   def update
-    @friendship = Friendship.find(params[:id])
+    debugger
+    @friendship = Friendship.find_by(user_id: params[:user_id], friend_id: params[:friend_id])
     @friendship.status = !@friendship.status
     if @friendship.save
       redirect_to current_user, notice: 'Invitation accepted'
@@ -24,7 +25,7 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    @friendship = Friendship.find(params[:id])
+    @friendship = Friendship.find_by(user_id: params[:user_id], friend_id: params[:friend_id])
     if @friendship.destroy
       redirect_to current_user, notice: 'Invitation rejected'
     else
