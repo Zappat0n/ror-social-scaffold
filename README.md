@@ -1,6 +1,8 @@
-# Scaffold for social media app with Ruby on Rails
+# Social media app with Ruby on Rails
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+This is a social media app with basic styling.
+Users can write posts and invite another users to be their friends.
+Users can only see their posts and posts from their friends, and they can also like or comment other posts.
 
 ## Built With
 
@@ -9,8 +11,7 @@
 
 ## Live Demo
 
-TBA
-
+[Heroku version](https://secret-beach-83312.herokuapp.com/)
 
 ## Getting Started
 
@@ -18,13 +19,13 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
+- Ruby: 2.6.3
+- Rails: 5.2.3
+- Postgres: >=9.5
 
 ### Setup
 
-Instal gems with:
+Install gems with:
 
 ```
 bundle install
@@ -63,22 +64,35 @@ Open `http://localhost:3000/` in your browser.
     rpsec --format documentation
 ```
 
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
+You can run multiple rspec tests to check for the validity of the model and the different features.
 
 ### Documentation
 
 This is the database model:
 
-![Database model](./docs/ERD.jpeg).
+![Database model](./docs/ERD.jpeg)
 
+To use the application you need to create an user.
 
-### Deployment
+After that you will be redirected to the timeline where you will be able to see all your posts and posts from your friends.
+Here you can comment or like any post.
 
-TBA
+You can go to the all users page too, where you will see all the users of the application.
+
+Here you can send friend requests and accept or reject friendship requests from other users.
+
+![Screenshot](./app/assets/images/screenshot.png)
 
 ## Authors
 
-TBA
+👤 **Nick Kuria**
+- GitHub: [@Nkuria](https://github.com/Nkuria)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/nkuria)
+
+👤 **Angel Barros**
+
+- GitHub: [@Zappat0n](https://github.com/Zappat0n)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/angel-barros/)
 
 ## 🤝 Contributing
 
@@ -89,12 +103,4 @@ Feel free to check the [issues page](issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-TBA
-
-## 📝 License
-
-TBA
 
