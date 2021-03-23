@@ -11,7 +11,7 @@ Users can only see their posts and posts from their friends, and they can also l
 
 ## Live Demo
 
-[Heroku version](https://secret-beach-83312.herokuapp.com/)
+[Heroku version](https://ror-social-zappat0n.herokuapp.com/)
 
 ## Getting Started
 
